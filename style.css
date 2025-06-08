@@ -1,0 +1,648 @@
+@font-face {
+  font-family: 'DMSans';
+  src: url('./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DMSans';
+  src: url('./assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+    overflow-x: hidden;
+    font-family: 'DMSans';
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main {
+    max-width: 1440px;
+    display: grid;
+    grid-auto-columns: 100px ;
+    grid-auto-rows: 100px ;
+    grid-template-areas: 
+    "item-1 item-1 item-2 item-2 item-2 item-2 item-3 item-3"
+    "item-1 item-1 item-2 item-2 item-2 item-2 item-3 item-3"
+    "item-1 item-1 item-4 item-4 item-5 item-5 item-3 item-3"
+    "item-6 item-6 item-4 item-4 item-5 item-5 item-3 item-3"
+    "item-6 item-6 item-7 item-7 item-8 item-8 item-8 item-8"
+    "item-6 item-6 item-7 item-7 item-8 item-8 item-8 item-8";       
+    gap: 1em;
+}
+
+
+.item {
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(0.7rem, 1.2vw, 1rem);
+    border-radius: 8px;
+    background-color: hsl(240, 40%, 40%);
+    text-align: left;
+    overflow: hidden;
+    word-break: break-word;
+    max-height: 100%;
+    padding: 15px;
+
+} 
+
+.item img, .item video {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.item-1 {
+    background-color: hsl(31, 66%, 93%);
+    font-size: xx-large;
+    justify-content: space-evenly;
+}
+
+.item-1 p {
+    text-align: left;
+    color: hsl(0, 0%, 7%);
+    line-height: 1.2;  
+    letter-spacing: -0.2px;    
+    font-weight: 500;    
+}
+
+.item-1 em {
+    font-style: italic;
+    color: hsl(256, 67%, 59%);
+}
+
+.item-1 img {
+    margin-top: 30px;
+    align-self: center;
+}
+    
+.item-2{
+    background-color: hsl(256, 67%, 59%);
+    line-height: 1;
+    align-items: center;
+    justify-content: space-evenly;
+    color:  hsl(0, 0%, 100%);
+
+}
+
+.item-2 h1 {
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: center;
+    
+}
+
+.item-2 img {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.item-2 em {
+    color: hsl(39, 100%, 71%);
+    font-style: normal;
+}
+
+.item-2 .em-2 {
+    color: hsl(0, 0%, 100%);
+    font-style: italic;
+}
+
+.item-2 p {
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.item-3{
+    background-color: hsl(254, 88%, 90%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 1em; 
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+.item-3 h1 {
+    text-align: left;
+    color:hsl(0, 0%, 7%);
+    line-height:1;
+    letter-spacing: -1px;
+}
+
+.item-3 p {
+    text-align: left;
+    color: hsl(256, 67%, 59%);
+    font-weight: 500;
+}
+
+.item-3 img {
+    display: block;
+    height: 200px; 
+    align-self: center;
+    
+}
+.item-4 {
+    background-color: hsl(31, 66%, 93%);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.item-4 p {
+    text-align: left;
+    font-size: x-large;
+    line-height: 1;
+    letter-spacing: -1px;
+    font-weight: 500;
+    color: hsl(0, 0%, 7%);
+    margin-top: 30px;
+}
+
+.item-5{
+    background-color: hsl(39, 100%, 71%);
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.item-5 p {
+    color: hsl(0, 0%, 7%);
+    line-height: 1;
+    letter-spacing: -1px;
+    font-weight: 500;
+    font-size: x-large;
+    text-align: left;
+
+}
+
+.item-6 {
+    background-color: hsl(39, 100%, 71%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;   
+    align-items: flex-start;   
+    box-sizing: border-box;    
+}
+
+
+.item-6 p {
+    font-size: xx-large;
+    font-weight: 500;
+    color: hsl(0, 0%, 7%);
+    text-align: left;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-top: 0;
+    word-break: break-word;
+    max-width: 100%;           
+}
+
+.item-6 img {
+    align-self: center;
+}
+
+.item-7{
+    background-color: hsl(31, 66%, 93%);
+    justify-content: center;
+    align-items: center;
+}
+
+.item-7 p {
+    color:hsl(0, 0%, 7%);
+    font-size: larger;
+    font-weight: 400;
+}
+
+.item-7 em {
+    font-size: 50px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.item-8{
+    background-color: hsl(256, 67%, 59%);
+    display: flex;
+    flex-direction: row;
+}
+
+.item-8 p {
+    font-size: xx-large;
+    color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+    color: hsl(39, 100%, 71%);
+    margin-top: 25px;
+}
+
+@media (min-width: 768px) and (max-width: 1300px) {
+    .main {
+        margin: 25px;
+        grid-auto-columns: 100px ;
+        grid-auto-rows: 100px ;
+        grid-template-areas: 
+        "item-1 item-1 item-2 item-2 item-2 item-2"
+        "item-1 item-1 item-2 item-2 item-2 item-2"
+        "item-1 item-1 item-4 item-4 item-5 item-5"
+        "item-6 item-6 item-4 item-4 item-5 item-5"
+        "item-6 item-6 item-7 item-7 item-3 item-3"
+        "item-6 item-6 item-7 item-7 item-3 item-3 "
+        "item-8 item-8 item-8 item-8 item-3 item-3 "
+        "item-8 item-8 item-8 item-8 item-3 item-3 ";             
+        gap: 1em; 
+}
+
+    .item-2 h1 {
+        line-height: 1; 
+}
+    .item-2 img {
+        max-width: 50%;
+}
+    .item-2 p {
+        font-size: large;
+        font-weight: 500;
+}
+
+    .item-3{
+        align-items: center;
+        justify-content: space-around;
+}
+
+    .item-3 h1 {
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    .item-3 p {
+        text-align: center;
+        font-weight: 500;
+        font-size: large;
+}
+
+    .item-3 img {
+        height:auto; 
+    
+}
+
+    .item-4 {
+        justify-content: center;
+}
+
+    .item-4 p {
+        text-align: center;
+        font-size: x-large;
+        line-height: 1;
+        letter-spacing: -1px;
+        font-weight: 600;
+}
+
+    
+    .item-5 {
+        gap: 25px;
+
+}
+    .item-5 p {
+        font-weight: 600;
+        font-size: x-large;
+        text-align: center;
+
+}
+
+    .item-6 {
+        justify-content: space-around;   
+}
+    .item-6 p {
+        text-align: center;
+}
+
+    .item-6 img {
+        width: auto;
+        height: 70%;
+}
+
+    .item-7 {
+        gap: 10px;
+}
+
+    .item-7 p {
+        text-align: center;
+        font-size: x-large;
+        font-weight: 400;
+}
+    .item-7 em {
+        font-size: 40px;
+        align-self: center;
+
+}
+
+    .item-7 img {
+        height: auto;
+        width: 70%;
+}
+
+.item-8{
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.item-8 p {
+    font-size: xx-large;
+    color: hsl(0, 0%, 100%);
+}
+
+.item-8 img {
+    height: auto;
+    width: 90%;
+}
+}
+
+ @media (max-width: 767px) {
+    .main {
+        margin: 25px;
+    grid-template-areas: 
+    " item-1 item-1 item-1 "
+    " item-1 item-1 item-1"
+    " item-1 item-1 item-1 "
+    " item-2 item-2 item-2 "
+    " item-2 item-2 item-2 "
+    " item-2 item-2 item-2 "
+    " item-3 item-3 item-3 "
+    " item-3 item-3 item-3 "
+    " item-3 item-3 item-3 " 
+    " item-3 item-3 item-3 " 
+    " item-4 item-4 item-4 "
+    " item-4 item-4 item-4 "
+    " item-5 item-5 item-5 "
+    " item-5 item-5 item-5 " 
+    " item-6 item-6 item-6 "
+    " item-6 item-6 item-6 "
+    " item-6 item-6 item-6 "
+    " item-7 item-7 item-7 "
+    " item-7 item-7 item-7 "
+    " item-8 item-8 item-8 "
+    " item-8 item-8 item-8 "
+    " item-8 item-8 item-8 "
+    " item-8 item-8 item-8 ";                            
+}
+
+    .item-2 h1 {
+        line-height: 1.2; 
+}
+    .item-2 img {
+        max-width: 100%;
+}
+    .item-2 p {
+        font-size: x-large;
+        font-weight: 500;
+}
+
+    .item-3{
+        align-items: center;
+        justify-content: space-around;
+}
+
+    .item-3 h1 {
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    .item-3 p {
+        text-align: center;
+        font-weight: 500;
+        font-size: large;
+}
+
+    .item-3 img {
+        height:auto; 
+    
+}
+
+    .item-4 {
+        justify-content: center;
+}
+
+    .item-4 p {
+        text-align: center;
+        font-size: x-large;
+        line-height: 1;
+        letter-spacing: -1px;
+        font-weight: 600;
+}
+
+    
+    .item-5 {
+        gap: 20px;
+
+}
+    .item-5 p {
+        font-weight: 600;
+        font-size: x-large;
+        text-align: center;
+
+}
+
+    .item-6 {
+        justify-content: space-around;   
+}
+    .item-6 p {
+        text-align: center;
+}
+
+    .item-6 img {
+        width: auto;
+        height: 70%;
+}
+
+    .item-7 {
+        gap: 10px;
+}
+
+    .item-7 p {
+        text-align: center;
+        font-size: x-large;
+        font-weight: 400;
+}
+    .item-7 em {
+        font-size: 40px;
+        align-self: center;
+
+}
+
+    .item-7 img {
+        height: auto;
+        width: 70%;
+}
+
+.item-8{
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.item-8 p {
+    font-size: xx-large;
+    color: hsl(0, 0%, 100%);
+}
+
+}
+
+ @media (min-width: 320px) and (max-width: 374px) {
+    .main {
+        margin: 25px;
+        grid-auto-columns: 80px ;
+        grid-auto-rows: 80px ;
+    grid-template-areas: 
+    " item-1 item-1 item-1 "
+    " item-1 item-1 item-1"
+    " item-1 item-1 item-1 "
+    " item-2 item-2 item-2 "
+    " item-2 item-2 item-2 "
+    " item-2 item-2 item-2 "
+    " item-2 item-2 item-2 "
+    " item-3 item-3 item-3 "
+    " item-3 item-3 item-3 "
+    " item-3 item-3 item-3 " 
+    " item-3 item-3 item-3 "
+    " item-3 item-3 item-3 "  
+    " item-4 item-4 item-4 "
+    " item-4 item-4 item-4 "
+    " item-5 item-5 item-5 "
+    " item-5 item-5 item-5 " 
+    " item-6 item-6 item-6 "
+    " item-6 item-6 item-6 "
+    " item-6 item-6 item-6 "
+    " item-7 item-7 item-7 "
+    " item-7 item-7 item-7 "
+    " item-8 item-8 item-8 "
+    " item-8 item-8 item-8 "
+    " item-8 item-8 item-8 "
+    " item-8 item-8 item-8 ";                            
+}
+
+    .item-2 h1 {
+        line-height: 1.2; 
+}
+    .item-2 img {
+        max-width: 100%;
+}
+    .item-2 p {
+        font-size: x-large;
+        font-weight: 500;
+        text-align: center;
+}
+
+    .item-3{
+        align-items: center;
+        justify-content: space-around;
+}
+
+    .item-3 h1 {
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    .item-3 p {
+        text-align: center;
+        font-weight: 500;
+        font-size: large;
+}
+
+    .item-3 img {
+        height:auto; 
+    
+}
+
+    .item-4 {
+        justify-content: center;
+}
+
+    .item-4 p {
+        text-align: center;
+        font-size: x-large;
+        line-height: 1;
+        letter-spacing: -1px;
+        font-weight: 600;
+}
+
+    
+    .item-5 {
+        gap: 20px;
+
+}
+    .item-5 p {
+        font-weight: 600;
+        font-size: x-large;
+        text-align: center;
+
+}
+
+    .item-6 {
+        justify-content: space-around;   
+}
+    .item-6 p {
+        text-align: center;
+}
+
+    .item-6 img {
+        width: auto;
+        height: 70%;
+}
+
+    .item-7 {
+        gap: 10px;
+}
+
+    .item-7 p {
+        text-align: center;
+        font-size: large;
+        font-weight: 400;
+}
+    .item-7 em {
+        font-size: 40px;
+        align-self: center;
+
+}
+
+    .item-7 img {
+        height: auto;
+        width: 50%;
+}
+
+.item-8{
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.item-8 p {
+    font-size: xx-large;
+    color: hsl(0, 0%, 100%);
+}
+
+}
+
+
+
+
+
+  
